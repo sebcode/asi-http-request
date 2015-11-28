@@ -1058,7 +1058,8 @@ static NSOperationQueue *sharedQueue = nil;
 	}
 	
 	[self performUploadThrottling];
-	
+    [self performDownloadThrottling];
+
 	if ([self shouldTimeOut]) {			
 		// Do we need to auto-retry this request?
 		if ([self numberOfTimesToRetryOnTimeout] > [self retryCount]) {
